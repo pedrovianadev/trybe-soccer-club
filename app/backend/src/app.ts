@@ -12,7 +12,7 @@ class App {
     // Não remover essa rota
     this.app.get('/', (req, res) => res.json({ ok: true }));
 
-    // Pra rodar o evaluator dnv G_G
+    // Pra rodar o evaluator dnv
     this.app.use(TeamRoutes);
   }
 
