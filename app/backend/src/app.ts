@@ -1,5 +1,6 @@
 import * as express from 'express';
 import TeamRoutes from './database/routes/Team.routes';
+import UserRoutes from './database/routes/User.routes';
 
 class App {
   public app: express.Express;
@@ -14,6 +15,8 @@ class App {
 
     // Pra rodar o evaluator dnv
     this.app.use(TeamRoutes);
+
+    this.app.use(UserRoutes);
   }
 
   private config():void {
