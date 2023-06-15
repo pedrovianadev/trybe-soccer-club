@@ -29,13 +29,13 @@ class MatchService {
   }
 
   async update(id: number): Promise<IResponse> {
-    this.model.update({ inProgress: false }, { where: { id } });
+    await this.model.update({ inProgress: false }, { where: { id } });
 
     return { message: 'Finished' };
   }
 
   async updateGoals(body: IGoals, id: number): Promise<IResponse> {
-    this.model.update(body, { where: { id } });
+    await this.model.update(body, { where: { id } });
 
     return { message: 'updated goals' };
   }
